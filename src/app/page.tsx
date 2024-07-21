@@ -1,6 +1,9 @@
+import { Colors } from "./_components/colors/colors";
 
 export default function Home() {
   return (
-    <div className="text-purple-800">frist next project</div>
+   <>
+   <Colors/>
+   </>
   );
 }
