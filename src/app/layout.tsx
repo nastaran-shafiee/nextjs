@@ -1,3 +1,5 @@
+import { Footer } from "./_components/footer/footer";
+import { Header } from "./_components/header/header";
 import "./globals.css";
 
 export default function RootLayout({
@@ -6,12 +8,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <header className="bg-gray-400 flex items-center w-full h-20 justify-center">header</header>
+    <html lang="en" dir="rtl" className={`dark`}>
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-200 dark:text-base-content" >
+        <Header />
         <div className="flex flex-1"> {children}</div>
-
-        <footer className="bg-gray-400 flex items-center w-full h-20 justify-center">footer</footer>
+        <Footer />
       </body>
     </html>
   );

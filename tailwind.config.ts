@@ -65,6 +65,7 @@ const config: Config = {
   ],
   theme: {
     colors:tailwindColors,
+    
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -73,6 +74,7 @@ const config: Config = {
       },
     },
   },
+  darkMode:"class",
   plugins: [],
 };
 export default config;
