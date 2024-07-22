@@ -1,4 +1,4 @@
-import { colord,extend } from "colord";
+import { colord, extend } from "colord";
 import type { Config } from "tailwindcss";
 import mixPlugin from "colord/plugins/mix";
 
@@ -23,7 +23,7 @@ export function generateForegroundColorFrom(
 type ColorObject = {
   [key: string]: string;
 };
-export const tailwindColors:{[key:string]:string}={
+export const tailwindColors: { [key: string]: string } = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
@@ -56,25 +56,23 @@ export const tailwindColors:{[key:string]:string}={
   "error-content": generateForegroundColorFrom("#f87272"),
   "gradient-first": "#34eaa0",
   "gradient-second": "#0fa2e9",
-}
+};
 
 const config: Config = {
-  content: [
-  
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    colors:tailwindColors,
-    
+    colors: tailwindColors,
+    container:{center:true},
     extend: {
       backgroundImage: {
+        "hero-pattern": "url('/images/tile.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  darkMode:"class",
+  darkMode: "class",
   plugins: [],
 };
 export default config;
