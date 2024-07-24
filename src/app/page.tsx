@@ -1,5 +1,7 @@
-import { Colors } from "@/app/_components/colors";
 import Image from "next/image";
+import { Button } from "./_components/button";
+import "./globals.css";
+
 export default function Home() {
   return (
     <>
@@ -18,12 +20,12 @@ export default function Home() {
               هواتو داریم.
             </p>
             <div className="mt-5 flex gap-4">
-              {/* <Button variant="primary" size="large">
+              <Button variant="primary" size="large">
                 دوره‌های ری‌اکت و نکست
               </Button>
               <Button variant="neutral" size="large">
                 مشاوره برنامه‌نویسی
-              </Button> */}
+              </Button>
             </div>
             <Image
               src="/images/frameworks.png"
